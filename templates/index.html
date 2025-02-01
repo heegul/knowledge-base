@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'header.html' %}
+</head>
+<body>
+    <div class="container">
+        {% include 'sidebar.html' %}
+        <div class="main-content">
+            <header>
+                <h1>Insightful Knowledge Hub</h1>
+                <p>Boost Your Competence Powered by AI!</p>
+                <div class="search-bar">
+                    <input type="text" id="url" placeholder="Enter a URL or PDF URL">
+                    <input type="text" id="topic" placeholder="Enter a Topic">
+                    <input type="text" id="keywords" placeholder="Enter Keywords (comma separated)">
+                    <select id="content_type">
+                        <option value="default">Default</option>
+                        <option value="news">News</option>
+                        <option value="research">Research</option>
+                        <option value="business">Business</option>
+                        <option value="educational">Educational</option>
+                        <option value="english_teacher">English Teacher</option>
+                        <option value="claude">Claude3.5-Sonnet</option>
+                        <option value="lama3">Lama3</option>
+                        <option value="deepseek">DeepSeek</option>
+                    </select>
+                    <button onclick="addEntry()">Add Entry</button>
+                    <input type="file" id="pdf-upload">
+                    <button onclick="uploadPDF()">Add PDF</button>
+                </div>
+                <div class="editing-buttons">
+                    <button id="bold-button">Bold</button>
+                    <button id="increase-font-button">Increase Font Size</button>
+                    <button id="decrease-font-button">Decrease Font Size</button>
+                    <button id="save-button">Save</button>
+                </div>
+                <p id="result"></p>
+            </header>
+            <div class="entries" id="articles"></div>
+            <div class="entries" id="videos"></div>
+            <div class="entries" id="pdfs"></div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>
+

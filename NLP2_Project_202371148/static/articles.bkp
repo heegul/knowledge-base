@@ -1,0 +1,76 @@
+{
+    "articles": [
+        {
+            "title": "Introduction to Machine Learning",
+            "abstract": "An overview of machine learning techniques.",
+            "content": "Full content of the article goes here.",
+            "publication_date": "2024-01-20",
+            "source_id": 1,
+            "topic_id": 1
+        },
+        {
+            "title": "Advances in Neural Networks",
+            "abstract": "Latest research in neural networks.",
+            "content": "Full content of the article goes here.",
+            "publication_date": "2024-03-15",
+            "source_id": 1,
+            "topic_id": 2
+        },
+        {
+            "title": "NLP for Beginners",
+            "abstract": "Introduction to Natural Language Processing.",
+            "content": "Full content of the article goes here.",
+            "publication_date": "2024-02-10",
+            "source_id": 2,
+            "topic_id": 3
+        },
+        {
+            "title": "Semantic communication",
+            "abstract": "Introduction to Natural Language Processing.",
+            "content": "Full content of the article goes here.",
+            "publication_date": "2024-02-10",
+            "source_id": 1,
+            "topic_id": 4
+        },
+        {
+            "title": "Introduction to Machine Learning",
+            "abstract": "An overview of machine learning techniques.",
+            "content": "Full content of the article goes here.",
+            "publication_date": "2024-01-20",
+            "source_id": 1,
+            "topic_id": 1
+        },
+        {
+            "title": "Advances in Neural Networks",
+            "abstract": "Latest research in neural networks.",
+            "content": "Full content of the article goes here.",
+            "publication_date": "2024-03-15",
+            "source_id": 1,
+            "topic_id": 2
+        },
+        {
+            "title": "NLP for Beginners",
+            "abstract": "Introduction to Natural Language Processing.",
+            "content": "Full content of the article goes here.",
+            "publication_date": "2024-02-10",
+            "source_id": 2,
+            "topic_id": 3
+        },
+        {
+            "title": "Semantic communication",
+            "abstract": "Introduction to Natural Language Processing.",
+            "content": "Full content of the article goes here.",
+            "publication_date": "2024-02-10",
+            "source_id": 1,
+            "topic_id": 4
+        },
+        {
+            "title": "Live updates: D-Day 80th anniversary in Normandy, Biden, Macron, Zelensky, Prince William attend",
+            "abstract": "- World leaders, including US President Joe Biden, gathered at Normandy to commemorate the 80th anniversary of the D-Day landings, honoring the Allied troops who fought there during World War II.\n- The ceremony included speeches from leaders such as Emmanuel Macron, Rishi Sunak, and Justin Trudeau, acknowledging the sacrifices made during the Battle of Normandy.\n- British paratroopers experienced enhanced border checks upon landing in Normandy due to Brexit-related changes in entering the European Schengen zone.\n- French President Macron awarded 11 American veterans the Legion of Honor, France's highest civilian and military award, recognizing their bravery and service during WWII.\n- Vintage World War II aircraft, like the Placid Lassie C-47, participated in the commemorations, highlighting the challenges and costs associated with maintaining and flying these historic planes.\n- Actor Tom Hanks discussed democracy and the pursuit of a more perfect union with CNN during the 80th D-Day anniversary celebrations.\n- President Biden and Ukraine's President Zelensky emphasized the fight against tyranny and the importance of unity in defending freedoms during the D-Day commemorations.\n- Biden concluded his speech at the Normandy American Cemetery with a call to arms against tyranny, reminding the audience of the sacrifices made for freedom and the importance of standing against unchecked tyranny.",
+            "content": "https://edition.cnn.com/europe/live-news/d-day-80-anniversary-06-06-24-intl/index.html",
+            "publication_date": "2024-06-06",
+            "source_id": 1,
+            "topic_id": 1
+        }
+    ]
+}

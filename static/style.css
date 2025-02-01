@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.search-bar input[type="text"], 
+.search-bar input[type="file"], 
+.search-bar select, 
+.search-bar button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.editing-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.entries {
+    margin-top: 20px;
+}
+
+.article, .video, .pdf {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    cursor: pointer;
+}
+
+.description {
+    color: #555;
+    display: none;
+}
+
+.date, .topic, .keywords {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.summary {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.summary p, .description p {
+    margin: 5px 0;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.toggle-button:hover {
+    text-decoration: underline;
+}
