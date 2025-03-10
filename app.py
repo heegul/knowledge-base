@@ -5,7 +5,7 @@ import requests
 from werkzeug.utils import secure_filename
 import sqlite3
 import time
-from pdf_read import extract_text_from_pdf, get_pdf_summary, get_pdf_summary_lama3, get_pdf_summary_claude, get_pdf_summary_deepseek
+from pdf_read import extract_text_from_pdf, get_pdf_summary, get_pdf_summary_lama3, get_pdf_summary_claude, get_pdf_summary_deepseek, get_summary_grok
 from database import create_connection, create_tables, update_json_files
 from youtube_api import get_youtube_video_info
 from article_fetch import get_article_info
@@ -40,7 +40,9 @@ def uploaded_file(filename):
 
 def extract_summary_from_pdf(filepath):
     text = extract_text_from_pdf(filepath)
-    summary = get_pdf_summary_claude(text)
+    print("Grok PDF summarization starting...\n")
+    summary = get_summary_grok(text)
+    print("Done!\n")
     return summary
 
 
@@ -118,6 +120,7 @@ def download_pdf_from_url(url, upload_folder):
 
 @app.route('/upload-pdf', methods=['POST'])
 def upload_pdf():
+    print("Entering upload_pdf()")
     if 'file' not in request.files:
         return jsonify({"success": False, "error": "No file part"})
     file = request.files['file']
@@ -129,8 +132,8 @@ def upload_pdf():
         file.save(filepath)
 
         # Process the PDF file and extract summary
-        topic = request.form['topic']
-        keywords = request.form.get('keywords', '')
+        topic = request.form['topic'] or 'Unspecified'  # Default to 'Unspecified' if empty
+        keywords = request.form.get('keywords', '').strip() or 'None'  # Default to 'None' if empty
         summary = extract_summary_from_pdf(filepath)  # Implement this function
 
         title = filename  # Use filename as title if extraction fails
@@ -139,10 +142,7 @@ def upload_pdf():
         conn = create_connection()
         cursor = conn.cursor()
         try:
-            cursor.execute('''
-                INSERT INTO PDFs (title, content, url, date, topic, keywords)
-                VALUES (?, ?, ?, ?, ?, ?)
-            ''', (title, summary, filepath, date, topic, keywords))
+            cursor.execute('''INSERT INTO PDFs (title, content, url, date, topic, keywords) VALUES (?, ?, ?, ?, ?, ?)''', (title, summary, filepath, date, topic, keywords))
             conn.commit()
         except Exception as e:
             return jsonify({"success": False, "error": str(e)})
@@ -214,16 +214,37 @@ def get_topics():
 @app.route('/delete-entry', methods=['POST'])
 def delete_entry():
     data = request.json
-    table_name = data['table_name']
-    entry_id = data['id']
-
+    table_name = data.get('table_name')
+    entry_id = data.get('id')
+    
+    if not table_name or not entry_id:
+        return jsonify({"success": False, "error": "Missing table_name or id"})
+    
+    # Validate table_name to prevent SQL injection
+    valid_tables = ['articles', 'videos', 'pdfs']
+    if table_name.lower() not in valid_tables:
+        return jsonify({"success": False, "error": "Invalid table name"})
+    
     conn = create_connection()
     cursor = conn.cursor()
-    cursor.execute(f'DELETE FROM {table_name.capitalize()} WHERE id = ?', (entry_id,))
-    conn.commit()
-    conn.close()
-    update_json_files()
-    return jsonify({"success": True})
+    
+    try:
+        # Capitalize the first letter of table_name for the SQL query
+        table = table_name.capitalize()
+        if table.endswith('s'):
+            table = table[:-1] + 's'  # Ensure proper pluralization
+            
+        cursor.execute(f"DELETE FROM {table} WHERE id = ?", (entry_id,))
+        conn.commit()
+        
+        # Update the JSON files after deletion
+        update_json_files()
+        
+        return jsonify({"success": True})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)})
+    finally:
+        conn.close()
 
 
 @app.route('/update-title', methods=['POST'])

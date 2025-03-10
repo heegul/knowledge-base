@@ -142,8 +142,8 @@ async function uploadPDF() {
 
     const formData = new FormData();
     formData.append('file', fileInput.files[0]);
-    formData.append('topic', topicInput.value);
-    formData.append('keywords', keywordsInput.value);
+    formData.append('topic', topicInput.value.trim() || 'Unspecified');
+    formData.append('keywords', keywordsInput.value.trim() || 'None');
 
     const response = await fetch('/upload-pdf', {
         method: 'POST',
@@ -157,30 +157,108 @@ async function uploadPDF() {
     }
 }
 
-async function deleteEntry(table, id) {
-    const response = await fetch('/delete-entry', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ table_name: table, id: id })
+// Initialize the page when the DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded');
+    
+    // Set up topic click handlers in the sidebar
+    const topicLinks = document.querySelectorAll('.sidebar a');
+    console.log('Found topic links:', topicLinks.length);
+    
+    topicLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            console.log('Topic clicked:', this.textContent.trim());
+            
+            // Update active topic
+            topicLinks.forEach(l => l.style.textDecoration = 'none');
+            this.style.textDecoration = 'underline';
+            this.style.fontWeight = 'bold';
+            
+            // Store the active topic in localStorage for persistence
+            localStorage.setItem('activeTopic', this.textContent.trim());
+        });
     });
+    
+    // Check if there's a stored active topic and highlight it
+    const storedTopic = localStorage.getItem('activeTopic');
+    if (storedTopic) {
+        topicLinks.forEach(link => {
+            if (link.textContent.trim() === storedTopic) {
+                link.style.textDecoration = 'underline';
+                link.style.fontWeight = 'bold';
+            }
+        });
+    }
+    
+    // Load all entries initially
+    loadEntries();
+});
 
-    const result = await response.json();
-    if (result.success) {
-        loadEntries();
-    } else {
-        alert(`Failed to delete entry: ${result.error}`);
+// Function to search by keyword
+function searchByKeyword() {
+    const keyword = document.getElementById('search-keywords')?.value || '';
+    const activeTopic = document.querySelector('.topic-list a.active')?.getAttribute('data-topic') || 
+                        document.querySelector('.topic-list a.active')?.textContent.trim() || '';
+    loadEntries(activeTopic, keyword);
+}
+
+// Function to delete an entry
+async function deleteEntry(table, id) {
+    try {
+        // Store the current state before deletion
+        const activeTopic = localStorage.getItem('activeTopic') || '';
+        const currentKeyword = document.getElementById('search-keywords')?.value || '';
+        
+        const response = await fetch('/delete-entry', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ table_name: table, id: id })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            // Reload entries with the current topic and keyword
+            loadEntries(activeTopic, currentKeyword);
+            
+            // Preserve scroll position
+            const scrollPosition = window.scrollY;
+            setTimeout(() => {
+                window.scrollTo(0, scrollPosition);
+            }, 100);
+            
+            // Show a temporary success message
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'success-message';
+            messageDiv.textContent = 'Entry deleted successfully';
+            document.body.appendChild(messageDiv);
+            
+            // Remove the message after 3 seconds
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 3000);
+        } else {
+            console.error(`Error: ${result.error}`);
+        }
+    } catch (error) {
+        console.error('Error deleting entry:', error);
     }
 }
 
 function toggleContent(button) {
-    const descriptionDiv = button.nextElementSibling;
-    if (descriptionDiv.style.display === 'none' || descriptionDiv.style.display === '') {
-        descriptionDiv.style.display = 'block';
+    const entryDiv = button.parentElement;
+    const preview = entryDiv.querySelector('.content-preview');
+    const full = entryDiv.querySelector('.content-full');
+    
+    if (preview.style.display !== 'none') {
+        preview.style.display = 'none';
+        full.style.display = 'block';
         button.textContent = 'Show Less';
     } else {
-        descriptionDiv.style.display = 'none';
+        preview.style.display = 'block';
+        full.style.display = 'none';
         button.textContent = 'Show More';
     }
 }
@@ -191,79 +269,144 @@ function handleBlur(event) {
 }
 
 async function loadEntries(topic = '', keyword = '') {
-    const articlesResponse = await fetch(`/get-entries?table=articles&topic=${topic}&keyword=${keyword}`);
-    const videosResponse = await fetch(`/get-entries?table=videos&topic=${topic}&keyword=${keyword}`);
-    const pdfsResponse = await fetch(`/get-entries?table=pdfs&topic=${topic}&keyword=${keyword}`);
-    const articles = await articlesResponse.json();
-    const videos = await videosResponse.json();
-    const pdfs = await pdfsResponse.json();
+    try {
+        // Fetch all types of entries
+        const articlesResponse = await fetch(`/get-entries?table=articles&topic=${topic}&keyword=${keyword}`);
+        const videosResponse = await fetch(`/get-entries?table=videos&topic=${topic}&keyword=${keyword}`);
+        const pdfsResponse = await fetch(`/get-entries?table=pdfs&topic=${topic}&keyword=${keyword}`);
+        
+        const articles = await articlesResponse.json();
+        const videos = await videosResponse.json();
+        const pdfs = await pdfsResponse.json();
 
-    const articlesDiv = document.getElementById('articles');
-    const videosDiv = document.getElementById('videos');
-    const pdfsDiv = document.getElementById('pdfs');
+        // Get the container elements
+        const articlesDiv = document.getElementById('articles');
+        const videosDiv = document.getElementById('videos');
+        const pdfsDiv = document.getElementById('pdfs');
 
-    articlesDiv.innerHTML = '<h2>Articles</h2>';
-    videosDiv.innerHTML = '<h2>Videos</h2>';
-    pdfsDiv.innerHTML = '<h2>PDFs</h2>';
+        // Clear existing content
+        articlesDiv.innerHTML = '<h2>Articles</h2>';
+        videosDiv.innerHTML = '<h2>Videos</h2>';
+        pdfsDiv.innerHTML = '<h2>PDFs</h2>';
 
-    articles.forEach(article => {
-        const articleDiv = document.createElement('div');
-        articleDiv.classList.add('article');
-        articleDiv.innerHTML = `
-            <h3 class="title" id="title-articles-${article.id}" 
-                data-id="${article.id}" data-table="articles" data-field="title"
-                onclick="enableEditing(this, ${article.id}, 'articles', 'title')" 
-                onblur="saveTitle(this, ${article.id}, 'articles')">${article.title}</h3>
-            <button class="toggle-button" onclick="toggleContent(this)">Show More</button>
-            <div class="description" style="display: none;" data-id="${article.id}" data-table="articles" data-field="content"
-                onclick="enableEditing(this, ${article.id}, 'articles', 'content')" onblur="handleBlur(event)">${formatDescription(article.content)}</div>
-            <div class="date">Date: ${new Date(article.date).toLocaleString()}</div>
-            <div class="topic">Topic: ${article.topic}</div>
-            <div class="keywords">Keywords: ${article.keywords}</div>
-            <a href="${article.url}" target="_blank">Read more</a>
-            <button onclick="deleteEntry('articles', ${article.id})">Delete</button>
-        `;
-        articlesDiv.appendChild(articleDiv);
-    });
+        // Display articles
+        if (articles.length === 0) {
+            articlesDiv.innerHTML += '<p>No articles found for this topic.</p>';
+        } else {
+            articles.forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.classList.add('entry');
+                articleDiv.innerHTML = `
+                    <div class="entry-header">
+                        <h3 class="title">${article.title}</h3>
+                        <button class="delete-btn" onclick="deleteEntry('articles', ${article.id})">×</button>
+                    </div>
+                    <div class="content-preview">${formatContent(article.content, 200)}</div>
+                    <div class="content-full" style="display: none;">${article.content}</div>
+                    <button class="show-more-btn" onclick="toggleContent(this)">Show More</button>
+                    <div class="metadata">
+                        <div class="date">Date: ${new Date(article.date).toLocaleString()}</div>
+                        <div class="topic">Topic: ${article.topic}</div>
+                        <div class="keywords">Keywords: ${article.keywords}</div>
+                    </div>
+                    <a href="${article.url}" target="_blank">Read more</a>
+                `;
+                articlesDiv.appendChild(articleDiv);
+            });
+        }
 
-    videos.forEach(video => {
-        const videoDiv = document.createElement('div');
-        videoDiv.classList.add('video');
-        videoDiv.innerHTML = `
-            <h3 class="title" id="title-videos-${video.id}" 
-                data-id="${video.id}" data-table="videos" data-field="title"
-                onclick="enableEditing(this, ${video.id}, 'videos', 'title')" 
-                onblur="saveTitle(this, ${video.id}, 'videos')">${video.title}</h3>
-            <button class="toggle-button" onclick="toggleContent(this)">Show More</button>
-            <div class="description" style="display: none;" data-id="${video.id}" data-table="videos" data-field="content"
-                onclick="enableEditing(this, ${video.id}, 'videos', 'content')" onblur="handleBlur(event)">${formatDescription(video.content)}</div>
-            <div class="date">Date: ${new Date(video.date).toLocaleString()}</div>
-            <div class="topic">Topic: ${video.topic}</div>
-            <div class="keywords">Keywords: ${video.keywords}</div>
-            <a href="${video.url}" target="_blank">Watch video</a>
-            <button onclick="deleteEntry('videos', ${video.id})">Delete</button>
-        `;
-        videosDiv.appendChild(videoDiv);
-    });
+        // Display videos
+        if (videos.length === 0) {
+            videosDiv.innerHTML += '<p>No videos found for this topic.</p>';
+        } else {
+            videos.forEach(video => {
+                const videoDiv = document.createElement('div');
+                videoDiv.classList.add('entry');
+                videoDiv.innerHTML = `
+                    <div class="entry-header">
+                        <h3 class="title">${video.title}</h3>
+                        <button class="delete-btn" onclick="deleteEntry('videos', ${video.id})">×</button>
+                    </div>
+                    <div class="content-preview">${formatContent(video.content, 200)}</div>
+                    <div class="content-full" style="display: none;">${video.content}</div>
+                    <button class="show-more-btn" onclick="toggleContent(this)">Show More</button>
+                    <div class="metadata">
+                        <div class="date">Date: ${new Date(video.date).toLocaleString()}</div>
+                        <div class="topic">Topic: ${video.topic}</div>
+                        <div class="keywords">Keywords: ${video.keywords}</div>
+                    </div>
+                    <a href="${video.url}" target="_blank">Watch Video</a>
+                `;
+                videosDiv.appendChild(videoDiv);
+            });
+        }
 
-    pdfs.forEach(pdf => {
-        const pdfDiv = document.createElement('div');
-        pdfDiv.classList.add('pdf');
-        pdfDiv.innerHTML = `
-            <h3 class="title" id="title-pdfs-${pdf.id}" 
-                data-id="${pdf.id}" data-table="pdfs" data-field="title"
-                onclick="enableEditing(this, ${pdf.id}, 'pdfs', 'title')" 
-                onblur="saveTitle(this, ${pdf.id}, 'pdfs')">${pdf.title}</h3>
-            <button class="toggle-button" onclick="toggleContent(this)">Show More</button>
-            <div class="description" style="display: none;" data-id="${pdf.id}" data-table="pdfs" data-field="content"
-                onclick="enableEditing(this, ${pdf.id}, 'pdfs', 'content')" onblur="handleBlur(event)">${formatDescription(pdf.content)}</div>
-            <div class="topic">Topic: ${pdf.topic}</div>
-            <div class="keywords">Keywords: ${pdf.keywords}</div>
-            <a href="${pdf.url}" target="_blank">Download PDF</a>
-            <button onclick="deleteEntry('pdfs', ${pdf.id})">Delete</button>
-        `;
-        pdfsDiv.appendChild(pdfDiv);
-    });
+        // Display PDFs
+        if (pdfs.length === 0) {
+            pdfsDiv.innerHTML += '<p>No PDFs found for this topic.</p>';
+        } else {
+            pdfs.forEach(pdf => {
+                const pdfDiv = document.createElement('div');
+                pdfDiv.classList.add('entry');
+                pdfDiv.innerHTML = `
+                    <div class="entry-header">
+                        <h3 class="title">${pdf.title}</h3>
+                        <button class="delete-btn" onclick="deleteEntry('pdfs', ${pdf.id})">×</button>
+                    </div>
+                    <div class="content-preview">${formatContent(pdf.content, 200)}</div>
+                    <div class="content-full" style="display: none;">${pdf.content}</div>
+                    <button class="show-more-btn" onclick="toggleContent(this)">Show More</button>
+                    <div class="metadata">
+                        <div class="date">Date: ${new Date(pdf.date).toLocaleString()}</div>
+                        <div class="topic">Topic: ${pdf.topic}</div>
+                        <div class="keywords">Keywords: ${pdf.keywords}</div>
+                    </div>
+                    <a href="${pdf.url}" target="_blank">View PDF</a>
+                `;
+                pdfsDiv.appendChild(pdfDiv);
+            });
+        }
+    } catch (error) {
+        console.error('Error loading entries:', error);
+        document.getElementById('result').innerText = `Error: ${error.message}`;
+    }
+}
+
+// Helper function to format content with a character limit and preserve markdown formatting
+function formatContent(content, limit) {
+    if (!content) return 'No content available.';
+    
+    // Replace HTML tags with appropriate markdown
+    let formattedContent = content
+        .replace(/<p>/g, '')
+        .replace(/<\/p>/g, '\n\n')
+        .replace(/<br\s*\/?>/g, '\n')
+        .replace(/<h1>/g, '# ')
+        .replace(/<\/h1>/g, '\n\n')
+        .replace(/<h2>/g, '## ')
+        .replace(/<\/h2>/g, '\n\n')
+        .replace(/<h3>/g, '### ')
+        .replace(/<\/h3>/g, '\n\n')
+        .replace(/<ul>/g, '')
+        .replace(/<\/ul>/g, '\n')
+        .replace(/<li>/g, '• ')
+        .replace(/<\/li>/g, '\n')
+        .replace(/<strong>/g, '**')
+        .replace(/<\/strong>/g, '**')
+        .replace(/<em>/g, '*')
+        .replace(/<\/em>/g, '*')
+        .replace(/<code>/g, '`')
+        .replace(/<\/code>/g, '`');
+    
+    // Remove any remaining HTML tags
+    formattedContent = formattedContent.replace(/<[^>]*>/g, '');
+    
+    // Apply character limit if needed
+    if (limit && formattedContent.length > limit) {
+        return formattedContent.substring(0, limit) + '...';
+    }
+    
+    return formattedContent;
 }
 
 function applyBold() {
@@ -316,74 +459,6 @@ function formatDescription(description) {
     return lines.join('');
 }
 
-// function formatDescription(description) {
-//     const lines = description.split('\n').map(line => {
-//         // Replace **text** with <strong>text</strong>
-//         line = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
-//         // Replace ### text with <h3>text</h3>
-//         line = line.replace(/### (.*)/g, '<h3>$1</h3>');
-
-//         // Add special formatting for "In conclusion,"
-//         if (/^In conclusion,/.test(line.trim())) {
-//             return `<p><strong style="color:red;">${line.trim()}</strong></p>`;
-//         }
-
-//         // Replace lists with bullet points
-//         if (/^- /.test(line.trim())) {
-//             return `<li>${line.trim().substring(2)}</li>`;
-//         } else if (/^\* /.test(line.trim())) {
-//             return `<ul><li>${line.trim().substring(2)}</li></ul>`;
-//         } else if (/^\d+\./.test(line.trim())) {
-//             return `<li>${line.trim().replace(/^\d+\.\s*/, '')}</li>`;
-//         }
-
-//         // Add <p> tags around plain text
-//         return `<p>${line.trim()}</p>`;
-//     });
-
-//     // Combine lines into a single string and close any open list tags
-//     let formattedDescription = lines.join('');
-//     formattedDescription = formattedDescription.replace(/<\/ul><ul>/g, '')
-//                                                .replace(/<\/ol><ol>/g, '');
-
-//     // Wrap lists in <ul> tags
-//     formattedDescription = formattedDescription.replace(/(<li>.*?<\/li>)/g, '<ul>$1</ul>');
-
-//     return formattedDescription;
-// }
-
-// function formatDescription(description) {
-//     const subtitles = [
-//         "Main Ideas", "Key Technical Insights", "Elaboration on Important Points",
-//         "Deep, Nuanced Analysis", "In conclusion", "Overall", "Firstly", "Secondly",
-//         "Thirdly", "Finally"
-//     ];
-
-//     // Regex to match entire lines with subtitles and words ending with ":"
-//     const subtitleRegex = new RegExp(`^.*(${subtitles.join('|')}|\\b\\w+:).*$`, 'gm');
-
-//     const lines = description.split('\n').map(line => {
-//         // Replace **text** with <strong>text</strong>
-//         line = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
-//         // Replace ### text with <h3>text</h3>
-//         line = line.replace(/### (.*)/g, '<h3>$1</h3>');
-
-//         // Apply subtitle formatting to the entire line
-//         line = line.replace(subtitleRegex, '<strong style="font-size: 1.2em;">$&</strong>');
-
-//         // Wrap lines in <p> tags
-//         if (line.trim() !== "") {
-//             return `<p>${line.trim()}</p>`;
-//         }
-//         return '';
-//     });
-
-//     return lines.join('');
-// }
-
-
 // Event listeners for formatting buttons
 document.getElementById('bold-button').addEventListener('click', applyBold);
 document.getElementById('increase-font-button').addEventListener('click', increaseFontSize);
@@ -394,3 +469,10 @@ window.onload = () => {
     loadSidebar();
     loadEntries();
 };
+
+// Fallback initialization in case DOMContentLoaded has already fired
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    console.log('Document already loaded, initializing tabs now');
+    setTimeout(initializeTabs, 100);
+}
+

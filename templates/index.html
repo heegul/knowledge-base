@@ -8,7 +8,7 @@
         {% include 'sidebar.html' %}
         <div class="main-content">
             <header>
-                <h1>Insightful Knowledge Hub</h1>
+                <h1>TESTING!</h1>
                 <p>Boost Your Competence Powered by AI!</p>
                 <div class="search-bar">
                     <input type="text" id="url" placeholder="Enter a URL or PDF URL">
@@ -37,9 +37,20 @@
                 </div>
                 <p id="result"></p>
             </header>
-            <div class="entries" id="articles"></div>
-            <div class="entries" id="videos"></div>
-            <div class="entries" id="pdfs"></div>
+            <div class="entries-container">
+                <div class="entries" id="articles">
+                    <h2>Articles</h2>
+                    <!-- Articles will be loaded here -->
+                </div>
+                <div class="entries" id="videos">
+                    <h2>Videos</h2>
+                    <!-- Videos will be loaded here -->
+                </div>
+                <div class="entries" id="pdfs">
+                    <h2>PDFs</h2>
+                    <!-- PDFs will be loaded here -->
+                </div>
+            </div>
         </div>
     </div>
     {% include 'footer.html' %}

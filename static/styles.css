@@ -1,0 +1,358 @@
+.entries-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.entries {
+    flex: 1;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Add vertical separators between sections */
+.entries:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+/* Ensure proper spacing for entries */
+.article, .video, .pdf {
+    margin-bottom: 25px;
+    padding: 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+/* Subtle hover effect to make items feel interactive */
+.article:hover, .video:hover, .pdf:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Add a subtle indicator at the bottom of each item except the last */
+.article:not(:last-child)::after,
+.video:not(:last-child)::after,
+.pdf:not(:last-child)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+}
+
+/* Different background tints for different content types */
+.article {
+    border-left: 4px solid #4285F4;
+}
+
+.video {
+    border-left: 4px solid #EA4335;
+}
+
+.pdf {
+    border-left: 4px solid #34A853;
+}
+
+/* Make the title more prominent */
+.title {
+    font-size: 1.5em;
+    margin: 0 0 12px 0;
+    color: #202124;
+    font-weight: 500;
+}
+
+.entry {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.content-preview, .content-full {
+    margin: 10px 0;
+    line-height: 1.5;
+    white-space: pre-line; /* Preserve line breaks */
+}
+
+/* Markdown-style formatting */
+.content-preview p, .content-full p {
+    margin-bottom: 1em;
+}
+
+.content-preview h1, .content-full h1,
+.content-preview h2, .content-full h2,
+.content-preview h3, .content-full h3,
+.content-preview h4, .content-full h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.content-preview ul, .content-full ul,
+.content-preview ol, .content-full ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.content-preview li, .content-full li {
+    margin-bottom: 0.5em;
+}
+
+.content-preview code, .content-full code {
+    background-color: #f0f0f0;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.content-preview pre, .content-full pre {
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1em;
+}
+
+.metadata {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.show-more-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.show-more-btn:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add a line above the delete button for testing */
+.delete-btn {
+    position: relative;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.delete-btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    width: 44px; /* Wider than the button */
+    height: 2px;
+    background-color: #f44336; /* Same color as the button */
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.delete-btn:hover::before {
+    background-color: #d32f2f; /* Change line color on hover too */
+}
+
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.search-container {
+    margin-bottom: 20px !important;
+    display: block !important;
+}
+
+.topic-tabs {
+    display: flex !important;
+    border-bottom: 1px solid #ccc !important;
+    margin-bottom: 15px !important;
+    overflow-x: auto !important;
+    padding-bottom: 2px !important;
+    width: 100% !important;
+}
+
+.topic-tabs .tab {
+    padding: 8px 16px !important;
+    margin-right: 5px !important;
+    border: 1px solid #ccc !important;
+    border-bottom: none !important;
+    border-radius: 5px 5px 0 0 !important;
+    cursor: pointer !important;
+    background-color: #f1f1f1 !important;
+    position: relative !important;
+    top: 1px !important;
+    display: block !important;
+}
+
+.topic-tabs .tab.active {
+    background-color: white !important;
+    border-bottom: 1px solid white !important;
+    font-weight: bold !important;
+}
+
+.topic-tabs .tab:hover {
+    background-color: #e0e0e0 !important;
+}
+
+.topic-tabs .tab.active:hover {
+    background-color: white !important;
+}
+
+#current-topic {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    font-size: 24px !important;
+    color: #333 !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the topic list in the sidebar */
+.topic-list a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    border-left: 3px solid transparent;
+    transition: background-color 0.3s, border-left-color 0.3s;
+}
+
+.topic-list a:hover {
+    background-color: #f5f5f5;
+    border-left-color: #ddd;
+}
+
+.topic-list a.active {
+    background-color: #e0e0e0;
+    border-left-color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Current topic heading */
+#current-topic {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* Add this to create vertical separators between content sections */
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Add more spacing after entry links */
+.entry a[target="_blank"] {
+    display: inline-block;
+    margin-bottom: 45px;
+    margin-top: 20px;
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.entry a[target="_blank"]:hover {
+    color: #0b7dda;
+    text-decoration: underline;
+}
+
+/* Specific styling for each type of link */
+.entry a[href*="pdf"] {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23D32F2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>') no-repeat left center;
+    padding-left: 22px;
+}
+
+.entry a[href*="youtube"] {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>') no-repeat left center;
+    padding-left: 22px;
+}
+
+.entry a:not([href*="youtube"]):not([href*="pdf"]) {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%232196F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>') no-repeat left center;
+    padding-left: 22px;
+}

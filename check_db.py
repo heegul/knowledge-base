@@ -47,7 +47,11 @@ def insert_sample_data(conn):
     ''')
     cursor.execute('''
         INSERT INTO PDFs (title, content, url, date, topic, keywords)
-        VALUES ('Sample PDF', 'This is a sample PDF summary.', 'uploads/sample.pdf', '2024-06-16','Education', 'sample, pdf' )
+        VALUES ('Sample PDF', 'This is a sample PDF summary.', 'uploads/sample.pdf', '2024-06-16', 'Education', 'sample, pdf')
+    ''')
+    cursor.execute('''
+        INSERT INTO PDFs (title, content, url, date, topic, keywords)
+        VALUES ('Study PDF', 'This is a sample study PDF summary.', 'uploads/study.pdf', '2024-06-16', 'Study', 'sample, study')
     ''')
     conn.commit()
 

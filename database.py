@@ -81,17 +81,16 @@ def update_json_files():
         } for video in videos], f, indent=4)
 
     # Update pdfs.json
-    cursor.execute('SELECT id, title, content, url, date, topic, keywords FROM PDFs')
+    cursor.execute('SELECT title, content, url, date, topic, keywords FROM PDFs')
     pdfs = cursor.fetchall()
     with open('static/pdfs.json', 'w') as f:
         json.dump([{
-            'id': pdf[0],
-            'title': pdf[1],
-            'content': pdf[2],
-            'url': pdf[3],
-            'date': pdf[6],  # Use the date column for PDFs
-            'topic': pdf[4],
-            'keywords': pdf[5]
+            'title': pdf[0],
+            'content': pdf[1],
+            'url': pdf[2],
+            'date': pdf[3] if pdf[3] else 'N/A',  # Default to 'N/A' if date is empty
+            'topic': pdf[4] if pdf[4] else 'Unspecified',  # Default to 'Unspecified' if topic is empty
+            'keywords': pdf[5] if pdf[5] else 'None'  # Default to 'None' if keywords are empty
         } for pdf in pdfs], f, indent=4)
 
     conn.close()

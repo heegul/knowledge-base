@@ -11,13 +11,22 @@ from langchain_core.output_parsers import StrOutputParser
 from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
 from openai import OpenAI
 import os
+import requests
+import json
+from transformers import pipeline
+from bs4 import BeautifulSoup
 
 load_dotenv()
 
 ANTHROPIC_API_KEY = os.getenv('CLAUDE_API_KEY')
+GROK_API_KEY = os.getenv('GROK_API_KEY')
 
 
 openai.api_key = OPENAI_API_KEY
+
+# Initialize the summarization pipeline
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+
 
 def extract_text_from_pdf(pdf_path):
     with open(pdf_path, 'rb') as file:
@@ -47,6 +56,136 @@ def split_text_into_chunks(text, max_tokens=3000):
         chunks.append(' '.join(current_chunk))
 
     return chunks
+
+def get_web_summaries(query):
+    """
+    Fetch and summarize content from the top 5 Google search results for a given query.
+
+    Args:
+        query (str): The search query derived from the PDF text.
+
+    Returns:
+        str: Combined summaries of the top 5 web pages, or an empty string if an error occurs.
+    """
+    search_url = f"https://www.google.com/search?q={query}"
+    try:
+        html_content = requests.get(search_url).text
+    except Exception as e:
+        print(f"Error fetching search results: {e}")
+        return ""
+
+    soup = BeautifulSoup(html_content, "html.parser")
+    # Extract URLs from organic search results (links with <h3> tags)
+    urls = [a['href'] for a in soup.find_all('a') if
+            a.find('h3') and a['href'].startswith('http') and 'google' not in a['href']][:5]
+
+    summaries = []
+    for url in urls:
+        try:
+            html = requests.get(url).text
+            soup = BeautifulSoup(html, "html.parser")
+            # Remove scripts and styles to reduce noise
+            for script in soup(["script", "style"]):
+                script.extract()
+            text = soup.get_text()
+            summary = summarizer(text, max_length=100, min_length=30, do_sample=False)[0]['summary_text']
+            summaries.append(summary)
+        except Exception as e:
+            print(f"Error processing {url}: {e}")
+
+    return "\n\n".join(summaries)
+
+def get_summary_grok(text):
+    """
+    Summarize a research paper using the Grok API, enhanced with summaries from the top 5 related websites.
+
+    Args:
+        text (str): The extracted text of the research paper.
+
+    Returns:
+        str or None: The LaTeX-formatted summary if successful, None otherwise.
+    """
+    # API endpoint
+    url = "https://api.x.ai/v1/chat/completions"
+
+    # Headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {GROK_API_KEY}"
+    }
+
+    # System message content
+    system_message_content = (
+        "You are a domain expert in the field relevant to the provided research paper. Use this information to provide deep insights in your summary.\n\n"
+        "Your task is to summarize the provided research paper, maintaining its section structure. For each section in the original paper, write a brief summary of that section in the summary, using the same section heading.\n\n"
+        "The summary should be formatted in LaTeX, with each section starting with the appropriate LaTeX section command (e.g., \\section{}, \\subsection{}, etc.). If the original paper has figures, tables, or equations that are crucial to understanding the section, include references to them or provide simplified versions in the summary.\n\n"
+        "The output should be a complete LaTeX document that can be compiled to produce a nicely formatted summary. The LaTeX document should start with:\n\n"
+        "\\documentclass[12pt]{article}\n"
+        "\\usepackage{amsmath}\n"
+        "\\usepackage{amsfonts}\n"
+        "\\usepackage{amssymb}\n"
+        "\\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}\n"
+        "\\usepackage{hyperref}\n"
+        "\\usepackage{booktabs}\n"
+        "\\begin{document}\n\n"
+        "And end with:\n\n"
+        "\\end{document}\n\n"
+        "Include any necessary \\packages or commands in the preamble to ensure that the document compiles correctly.\n\n"
+        "Please ensure that the LaTeX code is correct and that the document is self-contained."
+    )
+
+    # Extract query from the first line of text (assumed to be the title)
+    query = text.split('\n', 1)[0].strip()
+
+    # Get web summaries
+    web_summaries = get_web_summaries(query)
+
+    # Construct user message content with PDF text and web summaries
+    if web_summaries:
+        additional_content = f"\n\nAdditionally, here are summaries of related web content:\n\n{web_summaries}"
+    else:
+        additional_content = ""
+
+    user_message_content = f"Here is the text of a research paper:\n\n{text}{additional_content}"
+
+    # User message
+    user_message = {
+        "role": "user",
+        "content": user_message_content
+    }
+
+    # System message
+    system_message = {
+        "role": "system",
+        "content": system_message_content
+    }
+
+    # Payload (data to send to the API)
+    payload = {
+        "messages": [system_message, user_message],
+        "model": "grok-2-latest",  # Assuming Grok 3 is available
+        "stream": False,
+        "temperature": 0
+    }
+
+    try:
+        # Make the API request
+        response = requests.post(url, headers=headers, data=json.dumps(payload))
+
+        # Check if the request was successful
+        if response.status_code == 200:
+            # Parse the JSON response
+            result = response.json()
+            # Extract the assistant's reply
+            summary = result["choices"][0]["message"]["content"]
+            return summary
+        else:
+            print(f"Error: {response.status_code} - {response.text}")
+            return None
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return None
+
 
 
 def get_summary_chatgpt(text, model="gpt-4o"):
@@ -89,20 +228,44 @@ def get_pdf_summary_deepseek(text):
         response = client.chat.completions.create(
             model="deepseek-chat",
             messages=[
-                {"role":"system","content":"You are an expert in the technical domain relevant to the topic being discussed in the provided content. Don't start with saying Unfortunately, no Apploggies. Just do your best"},
-                {
-                        "role": "user",
-                        "content": f"""Content to be summarized: {text}
 
-                            Assume the audience is also made up of domain experts. Summarize this text to:
-                            1. Deliver the main ideas
-                            2. Highlight key technical insights
-                            3. Elaborate on important points
-                                Ensure the summary is comprehensive and detailed, capturing the essence of the discussion.
-                                Make sure the amount of content is over 1 page.
-                            4. Provide deep, nuanced analysis. 
-                            """
+                {"role": "system", "content": """You are a distinguished technical expert and researcher with deep domain knowledge. 
+                    Approach this analysis with academic rigor and provide insights that would be valuable to fellow experts.
+                    Focus on technical depth while maintaining clarity and precision in your explanations."""},
+                {
+                    "role": "user",
+                    "content": f"""Content to be summarized: {text}
+
+                        As a domain expert writing for other experts, please provide a comprehensive analysis that:
+
+                        1. Core Analysis:
+                           - Synthesize the main theoretical frameworks and concepts
+                           - Identify key methodological approaches
+                           - Evaluate the significance of major findings
+
+                        2. Technical Deep-Dive:
+                           - Analyze technical implementations and architectural decisions
+                           - Examine algorithmic complexity and performance considerations
+                           - Highlight innovative technical solutions
+
+                        3. Critical Evaluation:
+                           - Assess the strengths and limitations of approaches
+                           - Compare with existing state-of-the-art methods
+                           - Identify potential areas for improvement
+
+                        4. Contextual Integration:
+                           - Place findings within broader theoretical frameworks
+                           - Connect to recent developments in the field
+                           - Discuss implications for future research
+
+                        Please ensure:
+                        - Maintain technical precision and academic rigor
+                        - Support key points with specific evidence from the text
+                        - Provide detailed analysis spanning at least one page
+                        - Focus on depth rather than breadth in technical aspects
+                        """
                 }
+
             ]
         )
         
@@ -116,29 +279,6 @@ def get_pdf_summary_deepseek(text):
         
     
 
-
-# def get_pdf_summary_claude(text):
-#     client = Anthropic(api_key=ANTHROPIC_API_KEY)
-#     message = client.messages.create(
-#         model= "claude-2.1",
-#         max_tokens=1000,
-#         messages=[
-#             {
-#                 "role": "user",
-                                
-#                 "content": 
-#                         f"You are an expert in the technical domain relevant to the topic being discussed in the PDF. content of PDF: {text} ." + 
-#                         "Assume the audience is also made up of domain experts. Summarize this text to deliver the main ideas, " +
-#                         "highlight key technical insights, elaborate on important points, and provide deep, nuanced analysis. " +
-#                         "Ensure the summary is comprehensive and detailed, capturing the essence of the discussion."
-
-#             }
-#         ]
-#     )
-
-#     summary = message.content[0].text
-
-#     return summary
 
 def get_pdf_summary_claude(text):
     client = Anthropic(api_key=ANTHROPIC_API_KEY)

@@ -1,24 +1,19 @@
 <header>
     <h1>Insightful Knowledge Hub</h1>
     <p>Boost Your Competence Powered by AI!</p>
-    <div class="search-bar">
-        <input type="text" id="url" placeholder="Enter a URL or PDF URL">
-        <input type="text" id="topic" placeholder="Enter a Topic">
-        <input type="text" id="keywords" placeholder="Enter Keywords (comma separated)">
-        <select id="content_type">
-            <option value="default">Default</option>
-            <option value="news">News</option>
-            <option value="research">Research</option>
-            <option value="business">Business</option>
-            <option value="educational">Educational</option>
-            <option value="english_teacher">English Teacher</option>
-            <option value="claude">Claude3.5-Sonnet</option>
-            <option value="lama3">Lama3</option>
-            <option value="deepseek">DeepSeek</option>
-        </select>
-        <button onclick="addEntry()">Add Entry</button>
-        <input type="file" id="pdf-upload">
-        <button onclick="uploadPDF()">Add PDF</button>
+    <div class="search-container">
+        <div class="topic-tabs" id="topic-tabs">
+            <div class="tab active" data-topic="">All</div>
+            <div class="tab" data-topic="AI">AI</div>
+            <div class="tab" data-topic="Wireless">Wireless</div>
+            <div class="tab" data-topic="Study">Study</div>
+            <div class="tab" data-topic="Medical">Medical</div>
+            <!-- Add more tabs as needed -->
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-keywords" placeholder="Enter Keywords (comma separated)">
+            <button onclick="searchByKeyword()">Search</button>
+        </div>
     </div>
     <div class="editing-buttons">
         <button id="bold-button" onclick="applyCommand('bold')">Bold</button>
@@ -28,7 +23,49 @@
     </div>
     <p id="result"></p>
 </header>
-<div class="entries" id="articles"></div>
-<div class="entries" id="videos"></div>
-<div class="entries" id="pdfs"></div>
-<script src="script.js"></script>
+<h1 id="current-topic">All Topics</h1>
+.entries-container h2:first-child {
+    margin-top: 0;
+}
+<div class="entries-container">
+    <h2>Articles</h2>
+    <div class="entries" id="articles"></div>
+    <h2>Videos</h2>
+    <div class="entries" id="videos"></div>
+    <h2>PDFs</h2>
+    <div class="entries" id="pdfs"></div>
+</div>
+<script>
+    // Check if tabs are loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded');
+        console.log('Tabs found:', document.querySelectorAll('.tab').length);
+        
+        // Force tabs to be visible with inline styles
+        const tabsContainer = document.getElementById('topic-tabs');
+        if (tabsContainer) {
+            tabsContainer.style.display = 'flex';
+            tabsContainer.style.borderBottom = '1px solid #ccc';
+            tabsContainer.style.marginBottom = '15px';
+            
+            const tabs = tabsContainer.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.style.padding = '8px 16px';
+                tab.style.marginRight = '5px';
+                tab.style.border = '1px solid #ccc';
+                tab.style.borderBottom = 'none';
+                tab.style.borderRadius = '5px 5px 0 0';
+                tab.style.cursor = 'pointer';
+                tab.style.backgroundColor = '#f1f1f1';
+            });
+            
+            // Make sure the active tab is styled correctly
+            const activeTab = tabsContainer.querySelector('.tab.active');
+            if (activeTab) {
+                activeTab.style.backgroundColor = 'white';
+                activeTab.style.borderBottom = '1px solid white';
+                activeTab.style.fontWeight = 'bold';
+            }
+        }
+    });
+</script>
