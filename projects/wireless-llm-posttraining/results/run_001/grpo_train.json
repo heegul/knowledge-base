@@ -1,0 +1,3750 @@
+{
+  "method": "solver-reward GRPO adaptation of DeepSeekMath Eq. 3-4",
+  "source": "https://arxiv.org/html/2402.03300v3",
+  "seed": 241126,
+  "group_size": 8,
+  "mu": 2,
+  "epsilon": 0.2,
+  "beta": 0.04,
+  "learning_rate": 1e-05,
+  "max_new_tokens": 20,
+  "groups": 120,
+  "total_policy_updates": 72,
+  "zero_variance_groups": 84,
+  "training_seconds": 109.4,
+  "peak_torch_allocated_mib": 3599,
+  "log": [
+    {
+      "group": 1,
+      "prompt_id": "rl_prompts-0088",
+      "rewards": [
+        0.5833,
+        1.0,
+        0.5833,
+        0.5833,
+        0.5833,
+        0.5833,
+        0.5833,
+        0.5833
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U0",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.13779956102371216,
+      "updates": 2,
+      "losses": [
+        -1.6391277313232422e-07,
+        -0.010489150881767273
+      ],
+      "kl": [
+        0.0,
+        0.003574710339307785
+      ],
+      "last_grad_norm": 0.5666965842247009,
+      "seconds": 2.0
+    },
+    {
+      "group": 2,
+      "prompt_id": "rl_prompts-0075",
+      "rewards": [
+        1.0,
+        0.8824,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8824,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.05094267055392265,
+      "updates": 2,
+      "losses": [
+        4.616379737854004e-05,
+        -0.013714492321014404
+      ],
+      "kl": [
+        0.0011676574358716607,
+        0.013044296763837337
+      ],
+      "last_grad_norm": 0.26231518387794495,
+      "seconds": 3.3
+    },
+    {
+      "group": 3,
+      "prompt_id": "rl_prompts-0157",
+      "rewards": [
+        0.7692,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.7692,
+        0.7692
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.11172066628932953,
+      "updates": 2,
+      "losses": [
+        0.0008745640516281128,
+        -0.004360809922218323
+      ],
+      "kl": [
+        0.021859019994735718,
+        0.018506886437535286
+      ],
+      "last_grad_norm": 3.494403123855591,
+      "seconds": 4.4
+    },
+    {
+      "group": 4,
+      "prompt_id": "rl_prompts-0064",
+      "rewards": [
+        1.0,
+        0.7333,
+        0.8667,
+        0.7333,
+        1.0,
+        0.7333,
+        0.7333,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U2,RB2=U0",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.12360329926013947,
+      "updates": 2,
+      "losses": [
+        0.0011968016624450684,
+        -0.010965831577777863
+      ],
+      "kl": [
+        0.02991633303463459,
+        0.023488426581025124
+      ],
+      "last_grad_norm": 3.372370958328247,
+      "seconds": 5.5
+    },
+    {
+      "group": 5,
+      "prompt_id": "rl_prompts-0154",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9444,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.018373282626271248,
+      "updates": 2,
+      "losses": [
+        0.00026308000087738037,
+        -0.008662208914756775
+      ],
+      "kl": [
+        0.006535412278026342,
+        0.025002503767609596
+      ],
+      "last_grad_norm": 0.3217844069004059,
+      "seconds": 6.6
+    },
+    {
+      "group": 6,
+      "prompt_id": "rl_prompts-0051",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.75,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.08267972618341446,
+      "updates": 2,
+      "losses": [
+        0.00032278895378112793,
+        -0.005428940057754517
+      ],
+      "kl": [
+        0.008070539683103561,
+        0.005155352409929037
+      ],
+      "last_grad_norm": 0.05810653790831566,
+      "seconds": 7.8
+    },
+    {
+      "group": 7,
+      "prompt_id": "rl_prompts-0003",
+      "rewards": [
+        0.8462,
+        0.8462,
+        0.8462,
+        0.7692,
+        1.0,
+        1.0,
+        0.8462,
+        0.8462
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U0",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.07631975412368774,
+      "updates": 2,
+      "losses": [
+        0.00014138221740722656,
+        -0.008955836296081543
+      ],
+      "kl": [
+        0.0035377454478293657,
+        0.004688760731369257
+      ],
+      "last_grad_norm": 2.722024440765381,
+      "seconds": 8.9
+    },
+    {
+      "group": 8,
+      "prompt_id": "rl_prompts-0048",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 9.6
+    },
+    {
+      "group": 9,
+      "prompt_id": "rl_prompts-0079",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 10.4
+    },
+    {
+      "group": 10,
+      "prompt_id": "rl_prompts-0065",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 11.1
+    },
+    {
+      "group": 11,
+      "prompt_id": "rl_prompts-0094",
+      "rewards": [
+        1.0,
+        1.0,
+        0.6667,
+        0.6667,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.14433754980564117,
+      "updates": 2,
+      "losses": [
+        0.0003406703472137451,
+        -0.004378378391265869
+      ],
+      "kl": [
+        0.008514564484357834,
+        0.006941078696399927
+      ],
+      "last_grad_norm": 2.942943572998047,
+      "seconds": 12.3
+    },
+    {
+      "group": 12,
+      "prompt_id": "rl_prompts-0018",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9286
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.023622779175639153,
+      "updates": 2,
+      "losses": [
+        7.627904415130615e-05,
+        -0.005959942936897278
+      ],
+      "kl": [
+        0.0018672781297937036,
+        9.40375030040741e-05
+      ],
+      "last_grad_norm": 0.09577672183513641,
+      "seconds": 13.5
+    },
+    {
+      "group": 13,
+      "prompt_id": "rl_prompts-0077",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 14.2
+    },
+    {
+      "group": 14,
+      "prompt_id": "rl_prompts-0073",
+      "rewards": [
+        1.0,
+        0.7333,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.7333,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U1,RB2=U2",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U1,RB2=U2",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.1154700443148613,
+      "updates": 2,
+      "losses": [
+        0.00488242506980896,
+        -0.00021788477897644043
+      ],
+      "kl": [
+        0.12205931544303894,
+        0.23218834400177002
+      ],
+      "last_grad_norm": 1.0845099687576294,
+      "seconds": 15.4
+    },
+    {
+      "group": 15,
+      "prompt_id": "rl_prompts-0125",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 16.2
+    },
+    {
+      "group": 16,
+      "prompt_id": "rl_prompts-0019",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5833,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.13779956102371216,
+      "updates": 2,
+      "losses": [
+        0.00018058717250823975,
+        -0.00407920777797699
+      ],
+      "kl": [
+        0.004520645830780268,
+        0.003441654145717621
+      ],
+      "last_grad_norm": 2.150482654571533,
+      "seconds": 17.4
+    },
+    {
+      "group": 17,
+      "prompt_id": "rl_prompts-0060",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.625
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.12401959300041199,
+      "updates": 2,
+      "losses": [
+        0.00020483136177062988,
+        -0.005411311984062195
+      ],
+      "kl": [
+        0.005120641086250544,
+        0.009501929394900799
+      ],
+      "last_grad_norm": 0.2561368942260742,
+      "seconds": 18.5
+    },
+    {
+      "group": 18,
+      "prompt_id": "rl_prompts-0103",
+      "rewards": [
+        0.9091,
+        0.9091,
+        0.9091,
+        0.9091,
+        0.9091,
+        0.9091,
+        0.9091,
+        0.9091
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 19.2
+    },
+    {
+      "group": 19,
+      "prompt_id": "rl_prompts-0113",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 20.0
+    },
+    {
+      "group": 20,
+      "prompt_id": "rl_prompts-0068",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.5333,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.15433549880981445,
+      "updates": 2,
+      "losses": [
+        3.427267074584961e-06,
+        -0.00466589629650116
+      ],
+      "kl": [
+        8.771009743213654e-05,
+        1.3905887499277014e-05
+      ],
+      "last_grad_norm": 1.9570021629333496,
+      "seconds": 21.2
+    },
+    {
+      "group": 21,
+      "prompt_id": "rl_prompts-0069",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 22.0
+    },
+    {
+      "group": 22,
+      "prompt_id": "rl_prompts-0146",
+      "rewards": [
+        1.0,
+        0.9375,
+        1.0,
+        0.9375,
+        0.9375,
+        0.9375,
+        0.9375,
+        0.9375
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.027063293382525444,
+      "updates": 2,
+      "losses": [
+        0.005057245492935181,
+        -0.00917842984199524
+      ],
+      "kl": [
+        0.12643234431743622,
+        0.028121961280703545
+      ],
+      "last_grad_norm": 1.2104883193969727,
+      "seconds": 23.1
+    },
+    {
+      "group": 23,
+      "prompt_id": "rl_prompts-0096",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 23.8
+    },
+    {
+      "group": 24,
+      "prompt_id": "rl_prompts-0148",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 24.6
+    },
+    {
+      "group": 25,
+      "prompt_id": "rl_prompts-0122",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 25.4
+    },
+    {
+      "group": 26,
+      "prompt_id": "rl_prompts-0130",
+      "rewards": [
+        0.7857,
+        0.7857,
+        1.0,
+        1.0,
+        0.7857,
+        1.0,
+        0.7857,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.1071428656578064,
+      "updates": 2,
+      "losses": [
+        0.0006263256072998047,
+        -0.006355375051498413
+      ],
+      "kl": [
+        0.01565852202475071,
+        0.022217432036995888
+      ],
+      "last_grad_norm": 3.446392774581909,
+      "seconds": 26.5
+    },
+    {
+      "group": 27,
+      "prompt_id": "rl_prompts-0084",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 27.2
+    },
+    {
+      "group": 28,
+      "prompt_id": "rl_prompts-0002",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 28.0
+    },
+    {
+      "group": 29,
+      "prompt_id": "rl_prompts-0037",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 28.8
+    },
+    {
+      "group": 30,
+      "prompt_id": "rl_prompts-0106",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.9286,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.023622779175639153,
+      "updates": 2,
+      "losses": [
+        0.0031617581844329834,
+        -0.00125826895236969
+      ],
+      "kl": [
+        0.07900390774011612,
+        0.11168704181909561
+      ],
+      "last_grad_norm": 0.42217615246772766,
+      "seconds": 29.9
+    },
+    {
+      "group": 31,
+      "prompt_id": "rl_prompts-0102",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 30.7
+    },
+    {
+      "group": 32,
+      "prompt_id": "rl_prompts-0150",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 31.5
+    },
+    {
+      "group": 33,
+      "prompt_id": "rl_prompts-0136",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9333
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.022047918289899826,
+      "updates": 2,
+      "losses": [
+        0.0029277950525283813,
+        -0.009219378232955933
+      ],
+      "kl": [
+        0.07318601757287979,
+        0.13676801323890686
+      ],
+      "last_grad_norm": 0.9081008434295654,
+      "seconds": 32.6
+    },
+    {
+      "group": 34,
+      "prompt_id": "rl_prompts-0147",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 33.4
+    },
+    {
+      "group": 35,
+      "prompt_id": "rl_prompts-0143",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 34.1
+    },
+    {
+      "group": 36,
+      "prompt_id": "rl_prompts-0042",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 34.9
+    },
+    {
+      "group": 37,
+      "prompt_id": "rl_prompts-0133",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 35.6
+    },
+    {
+      "group": 38,
+      "prompt_id": "rl_prompts-0007",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 36.4
+    },
+    {
+      "group": 39,
+      "prompt_id": "rl_prompts-0023",
+      "rewards": [
+        0.8235,
+        0.8235,
+        0.8235,
+        0.8235,
+        0.8235,
+        0.8235,
+        0.8235,
+        0.8235
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 37.2
+    },
+    {
+      "group": 40,
+      "prompt_id": "rl_prompts-0132",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 37.9
+    },
+    {
+      "group": 41,
+      "prompt_id": "rl_prompts-0139",
+      "rewards": [
+        1.0,
+        0.3571,
+        1.0,
+        0.9286,
+        1.0,
+        1.0,
+        0.9286,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.20805677771568298,
+      "updates": 2,
+      "losses": [
+        0.00453561544418335,
+        -0.0037115812301635742
+      ],
+      "kl": [
+        0.11338812112808228,
+        0.15994848310947418
+      ],
+      "last_grad_norm": 1.791921854019165,
+      "seconds": 39.0
+    },
+    {
+      "group": 42,
+      "prompt_id": "rl_prompts-0098",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 39.8
+    },
+    {
+      "group": 43,
+      "prompt_id": "rl_prompts-0025",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.9444,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.018373282626271248,
+      "updates": 2,
+      "losses": [
+        9.134411811828613e-06,
+        -0.005577385425567627
+      ],
+      "kl": [
+        0.00018749821174424142,
+        0.0011347439140081406
+      ],
+      "last_grad_norm": 0.020577723160386086,
+      "seconds": 41.0
+    },
+    {
+      "group": 44,
+      "prompt_id": "rl_prompts-0052",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 41.8
+    },
+    {
+      "group": 45,
+      "prompt_id": "rl_prompts-0153",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 42.6
+    },
+    {
+      "group": 46,
+      "prompt_id": "rl_prompts-0017",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 43.4
+    },
+    {
+      "group": 47,
+      "prompt_id": "rl_prompts-0006",
+      "rewards": [
+        0.9167,
+        0.9167,
+        0.9167,
+        0.9167,
+        0.9167,
+        0.9167,
+        0.9167,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.027559906244277954,
+      "updates": 2,
+      "losses": [
+        6.0498714447021484e-05,
+        -0.007520049810409546
+      ],
+      "kl": [
+        0.0014922259142622352,
+        0.0007803899352438748
+      ],
+      "last_grad_norm": 0.7961041927337646,
+      "seconds": 44.5
+    },
+    {
+      "group": 48,
+      "prompt_id": "rl_prompts-0086",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 45.2
+    },
+    {
+      "group": 49,
+      "prompt_id": "rl_prompts-0117",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 46.0
+    },
+    {
+      "group": 50,
+      "prompt_id": "rl_prompts-0144",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 46.8
+    },
+    {
+      "group": 51,
+      "prompt_id": "rl_prompts-0011",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 47.5
+    },
+    {
+      "group": 52,
+      "prompt_id": "rl_prompts-0138",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.7273
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.09019605815410614,
+      "updates": 2,
+      "losses": [
+        9.451806545257568e-05,
+        -0.005634769797325134
+      ],
+      "kl": [
+        0.002353782532736659,
+        0.007798595819622278
+      ],
+      "last_grad_norm": 0.1579272747039795,
+      "seconds": 48.7
+    },
+    {
+      "group": 53,
+      "prompt_id": "rl_prompts-0114",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 49.4
+    },
+    {
+      "group": 54,
+      "prompt_id": "rl_prompts-0033",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 50.1
+    },
+    {
+      "group": 55,
+      "prompt_id": "rl_prompts-0095",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 50.9
+    },
+    {
+      "group": 56,
+      "prompt_id": "rl_prompts-0054",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 51.6
+    },
+    {
+      "group": 57,
+      "prompt_id": "rl_prompts-0137",
+      "rewards": [
+        0.8125,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.062009796500205994,
+      "updates": 2,
+      "losses": [
+        0.04118551313877106,
+        0.04203476011753082
+      ],
+      "kl": [
+        1.029638648033142,
+        0.6102036833763123
+      ],
+      "last_grad_norm": 2.4868087768554688,
+      "seconds": 52.8
+    },
+    {
+      "group": 58,
+      "prompt_id": "rl_prompts-0072",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 53.6
+    },
+    {
+      "group": 59,
+      "prompt_id": "rl_prompts-0028",
+      "rewards": [
+        0.8235,
+        0.8235,
+        1.0,
+        0.8235,
+        1.0,
+        1.0,
+        1.0,
+        0.8235
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U0,RB2=U2",
+        " RB1=U2,RB2=U0",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0882352963089943,
+      "updates": 2,
+      "losses": [
+        0.0002485513687133789,
+        -0.009366437792778015
+      ],
+      "kl": [
+        0.006204994861036539,
+        0.010185956954956055
+      ],
+      "last_grad_norm": 4.54277229309082,
+      "seconds": 54.7
+    },
+    {
+      "group": 60,
+      "prompt_id": "rl_prompts-0093",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 55.4
+    },
+    {
+      "group": 61,
+      "prompt_id": "rl_prompts-0038",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 56.2
+    },
+    {
+      "group": 62,
+      "prompt_id": "rl_prompts-0145",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 57.0
+    },
+    {
+      "group": 63,
+      "prompt_id": "rl_prompts-0041",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 57.7
+    },
+    {
+      "group": 64,
+      "prompt_id": "rl_prompts-0085",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 58.5
+    },
+    {
+      "group": 65,
+      "prompt_id": "rl_prompts-0034",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 59.3
+    },
+    {
+      "group": 66,
+      "prompt_id": "rl_prompts-0014",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9286,
+        0.9286
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.030929481610655785,
+      "updates": 2,
+      "losses": [
+        0.0006123483180999756,
+        -0.008257240056991577
+      ],
+      "kl": [
+        0.01529621984809637,
+        0.037910450249910355
+      ],
+      "last_grad_norm": 0.26124468445777893,
+      "seconds": 60.5
+    },
+    {
+      "group": 67,
+      "prompt_id": "rl_prompts-0055",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 61.3
+    },
+    {
+      "group": 68,
+      "prompt_id": "rl_prompts-0158",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 62.2
+    },
+    {
+      "group": 69,
+      "prompt_id": "rl_prompts-0092",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U1,RB2=U2",
+        " RB1=U1,RB2=U1",
+        " RB1=U1,RB2=U12",
+        " RB1=U1,RB2=U1,RB2=U2",
+        " RB1=U1,RB2=U1",
+        " RB1=U1,RB2=U1,RB2=U2",
+        " RB1=U1,RB2=U1,RB2=U2",
+        " RB1=U1,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 63.3
+    },
+    {
+      "group": 70,
+      "prompt_id": "rl_prompts-0053",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 64.1
+    },
+    {
+      "group": 71,
+      "prompt_id": "rl_prompts-0083",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 64.8
+    },
+    {
+      "group": 72,
+      "prompt_id": "rl_prompts-0100",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 65.5
+    },
+    {
+      "group": 73,
+      "prompt_id": "rl_prompts-0101",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 66.3
+    },
+    {
+      "group": 74,
+      "prompt_id": "rl_prompts-0035",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 67.2
+    },
+    {
+      "group": 75,
+      "prompt_id": "rl_prompts-0059",
+      "rewards": [
+        0.9412,
+        1.0,
+        1.0,
+        0.9412,
+        0.9412,
+        0.9412,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.029411762952804565,
+      "updates": 2,
+      "losses": [
+        0.0008412301540374756,
+        -0.006093233823776245
+      ],
+      "kl": [
+        0.021057233214378357,
+        0.01733662374317646
+      ],
+      "last_grad_norm": 3.7873082160949707,
+      "seconds": 68.3
+    },
+    {
+      "group": 76,
+      "prompt_id": "rl_prompts-0039",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 69.1
+    },
+    {
+      "group": 77,
+      "prompt_id": "rl_prompts-0121",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 69.8
+    },
+    {
+      "group": 78,
+      "prompt_id": "rl_prompts-0022",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 70.5
+    },
+    {
+      "group": 79,
+      "prompt_id": "rl_prompts-0107",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 71.3
+    },
+    {
+      "group": 80,
+      "prompt_id": "rl_prompts-0119",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 72.1
+    },
+    {
+      "group": 81,
+      "prompt_id": "rl_prompts-0135",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 72.9
+    },
+    {
+      "group": 82,
+      "prompt_id": "rl_prompts-0012",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U0,RB2=U1",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.06614378839731216,
+      "updates": 2,
+      "losses": [
+        2.428889274597168e-05,
+        -0.005960509181022644
+      ],
+      "kl": [
+        0.0005978625267744064,
+        0.0002516253443900496
+      ],
+      "last_grad_norm": 0.25158971548080444,
+      "seconds": 74.0
+    },
+    {
+      "group": 83,
+      "prompt_id": "rl_prompts-0057",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 74.8
+    },
+    {
+      "group": 84,
+      "prompt_id": "rl_prompts-0024",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1\n",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 75.5
+    },
+    {
+      "group": 85,
+      "prompt_id": "rl_prompts-0026",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 76.3
+    },
+    {
+      "group": 86,
+      "prompt_id": "rl_prompts-0030",
+      "rewards": [
+        0.8,
+        0.8,
+        0.8,
+        1.0,
+        0.8667,
+        0.8,
+        0.8,
+        0.8
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U0",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.06666665524244308,
+      "updates": 2,
+      "losses": [
+        0.0077598243951797485,
+        -0.0001592487096786499
+      ],
+      "kl": [
+        0.1939842700958252,
+        0.16294334828853607
+      ],
+      "last_grad_norm": 4.419241905212402,
+      "seconds": 77.5
+    },
+    {
+      "group": 87,
+      "prompt_id": "rl_prompts-0131",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 78.2
+    },
+    {
+      "group": 88,
+      "prompt_id": "rl_prompts-0050",
+      "rewards": [
+        1.0,
+        1.0,
+        0.8,
+        1.0,
+        0.8,
+        1.0,
+        1.0,
+        0.8
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U2,RB2=U0",
+        " RB1=U0,RB2=U2",
+        " RB1=U2,RB2=U0",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.09682457894086838,
+      "updates": 2,
+      "losses": [
+        0.001747235655784607,
+        -0.00814838707447052
+      ],
+      "kl": [
+        0.04369455575942993,
+        0.07293066382408142
+      ],
+      "last_grad_norm": 0.32364943623542786,
+      "seconds": 79.3
+    },
+    {
+      "group": 89,
+      "prompt_id": "rl_prompts-0116",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 80.1
+    },
+    {
+      "group": 90,
+      "prompt_id": "rl_prompts-0021",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 80.8
+    },
+    {
+      "group": 91,
+      "prompt_id": "rl_prompts-0129",
+      "rewards": [
+        0.0,
+        0.0,
+        0.9,
+        0.0,
+        0.9,
+        0.9,
+        0.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U1",
+        " RB1=U1,RB2=U1,RB2=U1,U2",
+        " RB1=U2,RB2=U1",
+        " RB1=U1,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U1,RB2=U1",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.4635123908519745,
+      "updates": 2,
+      "losses": [
+        0.012626409530639648,
+        0.0006444454193115234
+      ],
+      "kl": [
+        0.3328116238117218,
+        0.36071011424064636
+      ],
+      "last_grad_norm": 3.3915953636169434,
+      "seconds": 82.6
+    },
+    {
+      "group": 92,
+      "prompt_id": "rl_prompts-0127",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 83.5
+    },
+    {
+      "group": 93,
+      "prompt_id": "rl_prompts-0091",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 84.3
+    },
+    {
+      "group": 94,
+      "prompt_id": "rl_prompts-0043",
+      "rewards": [
+        0.9375,
+        0.9375,
+        0.9375,
+        0.875,
+        0.9375,
+        0.875,
+        0.9375,
+        0.9375
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.027063293382525444,
+      "updates": 2,
+      "losses": [
+        0.0023761987686157227,
+        -0.0011925995349884033
+      ],
+      "kl": [
+        0.059403885155916214,
+        0.06825226545333862
+      ],
+      "last_grad_norm": 3.036073684692383,
+      "seconds": 85.6
+    },
+    {
+      "group": 95,
+      "prompt_id": "rl_prompts-0115",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 86.4
+    },
+    {
+      "group": 96,
+      "prompt_id": "rl_prompts-0078",
+      "rewards": [
+        0.7692,
+        0.7692,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.09992599487304688,
+      "updates": 2,
+      "losses": [
+        0.0018048584461212158,
+        -0.007266610860824585
+      ],
+      "kl": [
+        0.045116912573575974,
+        0.07367544621229172
+      ],
+      "last_grad_norm": 1.3350744247436523,
+      "seconds": 87.7
+    },
+    {
+      "group": 97,
+      "prompt_id": "rl_prompts-0016",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 88.6
+    },
+    {
+      "group": 98,
+      "prompt_id": "rl_prompts-0067",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U12=U212=U2",
+        " RB1=U2,RB2=U12",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U12"
+      ],
+      "reward_std": 0.4841229319572449,
+      "updates": 2,
+      "losses": [
+        0.00950932502746582,
+        -0.013620078563690186
+      ],
+      "kl": [
+        0.28694599866867065,
+        0.2420043647289276
+      ],
+      "last_grad_norm": 1.2452391386032104,
+      "seconds": 90.1
+    },
+    {
+      "group": 99,
+      "prompt_id": "rl_prompts-0045",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 90.9
+    },
+    {
+      "group": 100,
+      "prompt_id": "rl_prompts-0134",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 91.7
+    },
+    {
+      "group": 101,
+      "prompt_id": "rl_prompts-0082",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 92.4
+    },
+    {
+      "group": 102,
+      "prompt_id": "rl_prompts-0029",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 93.2
+    },
+    {
+      "group": 103,
+      "prompt_id": "rl_prompts-0036",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 93.9
+    },
+    {
+      "group": 104,
+      "prompt_id": "rl_prompts-0142",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 94.7
+    },
+    {
+      "group": 105,
+      "prompt_id": "rl_prompts-0058",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 95.4
+    },
+    {
+      "group": 106,
+      "prompt_id": "rl_prompts-0124",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 96.2
+    },
+    {
+      "group": 107,
+      "prompt_id": "rl_prompts-0159",
+      "rewards": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U22",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U2,RB2=U22",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U2,RB2=U22"
+      ],
+      "reward_std": 0.4841229319572449,
+      "updates": 2,
+      "losses": [
+        0.010784164071083069,
+        -0.0076838284730911255
+      ],
+      "kl": [
+        0.27997586131095886,
+        0.24634964764118195
+      ],
+      "last_grad_norm": 2.4728236198425293,
+      "seconds": 97.5
+    },
+    {
+      "group": 108,
+      "prompt_id": "rl_prompts-0020",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 98.3
+    },
+    {
+      "group": 109,
+      "prompt_id": "rl_prompts-0008",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 99.0
+    },
+    {
+      "group": 110,
+      "prompt_id": "rl_prompts-0112",
+      "rewards": [
+        1.0,
+        1.0,
+        0.9286,
+        0.9286,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.030929481610655785,
+      "updates": 2,
+      "losses": [
+        0.0007571876049041748,
+        -0.011395961046218872
+      ],
+      "kl": [
+        0.01891683042049408,
+        0.011732394807040691
+      ],
+      "last_grad_norm": 3.6308815479278564,
+      "seconds": 100.1
+    },
+    {
+      "group": 111,
+      "prompt_id": "rl_prompts-0151",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 100.9
+    },
+    {
+      "group": 112,
+      "prompt_id": "rl_prompts-0089",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0",
+        " RB1=U1,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 101.6
+    },
+    {
+      "group": 113,
+      "prompt_id": "rl_prompts-0015",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U1,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 102.4
+    },
+    {
+      "group": 114,
+      "prompt_id": "rl_prompts-0062",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0",
+        " RB1=U2,RB2=U0"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 103.2
+    },
+    {
+      "group": 115,
+      "prompt_id": "rl_prompts-0066",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 103.9
+    },
+    {
+      "group": 116,
+      "prompt_id": "rl_prompts-0152",
+      "rewards": [
+        0.8333,
+        0.8333,
+        0.8333,
+        0.8333,
+        0.8333,
+        0.8333,
+        0.8333,
+        0.8333
+      ],
+      "responses": [
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 104.6
+    },
+    {
+      "group": 117,
+      "prompt_id": "rl_prompts-0087",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U2"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 105.5
+    },
+    {
+      "group": 118,
+      "prompt_id": "rl_prompts-0009",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.0,
+      "updates": 0,
+      "losses": [],
+      "kl": [],
+      "seconds": 106.2
+    },
+    {
+      "group": 119,
+      "prompt_id": "rl_prompts-0104",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U2,RB2=U2,U2=U12",
+        " RB1=U2,RB2=U2,U1=U2,U2",
+        " RB1=U2,RB2=U2,U2=U1",
+        " RB1=U2,RB2=U12",
+        " RB1=U2,RB2=U2,U2=U2,U2",
+        " RB1=U2,RB2=U22",
+        " RB1=U2,RB2=U2^2",
+        " RB1=U2,RB2=U1"
+      ],
+      "reward_std": 0.33071890473365784,
+      "updates": 2,
+      "losses": [
+        0.010769441723823547,
+        -0.0018694400787353516
+      ],
+      "kl": [
+        0.2869283854961395,
+        0.19192802906036377
+      ],
+      "last_grad_norm": 1.5905745029449463,
+      "seconds": 107.8
+    },
+    {
+      "group": 120,
+      "prompt_id": "rl_prompts-0004",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.875,
+        1.0,
+        1.0
+      ],
+      "responses": [
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U2",
+        " RB1=U0,RB2=U1",
+        " RB1=U0,RB2=U1"
+      ],
+      "reward_std": 0.04133986309170723,
+      "updates": 2,
+      "losses": [
+        0.0008075237274169922,
+        -0.004279762506484985
+      ],
+      "kl": [
+        0.02018863335251808,
+        0.0338454507291317
+      ],
+      "last_grad_norm": 0.17581483721733093,
+      "seconds": 108.9
+    }
+  ]
+}

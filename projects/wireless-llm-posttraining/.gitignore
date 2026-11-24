@@ -1,0 +1,7 @@
+model/
+runs/
+checkpoints/
+__pycache__/
+*.pyc
+.cache/
+.venv/

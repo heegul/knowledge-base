@@ -1,0 +1,86 @@
+{
+  "table": {
+    "test_id": {
+      "base": {
+        "n": 64,
+        "feasible": 0,
+        "optimal": 0,
+        "mean_optimality_ratio": 0.0
+      },
+      "sft": {
+        "n": 64,
+        "feasible": 64,
+        "optimal": 55,
+        "mean_optimality_ratio": 0.9819209614935718
+      },
+      "grpo": {
+        "n": 64,
+        "feasible": 64,
+        "optimal": 56,
+        "mean_optimality_ratio": 0.9794056204212455
+      }
+    },
+    "test_rate_shift": {
+      "base": {
+        "n": 64,
+        "feasible": 0,
+        "optimal": 0,
+        "mean_optimality_ratio": 0.0
+      },
+      "sft": {
+        "n": 64,
+        "feasible": 64,
+        "optimal": 32,
+        "mean_optimality_ratio": 0.904388327873013
+      },
+      "grpo": {
+        "n": 64,
+        "feasible": 64,
+        "optimal": 41,
+        "mean_optimality_ratio": 0.938946129766633
+      }
+    },
+    "test_more_users": {
+      "base": {
+        "n": 64,
+        "feasible": 0,
+        "optimal": 0,
+        "mean_optimality_ratio": 0.0
+      },
+      "sft": {
+        "n": 64,
+        "feasible": 64,
+        "optimal": 21,
+        "mean_optimality_ratio": 0.795331432762499
+      },
+      "grpo": {
+        "n": 64,
+        "feasible": 59,
+        "optimal": 18,
+        "mean_optimality_ratio": 0.7449070537305832
+      }
+    }
+  },
+  "paired_sft_vs_grpo": {
+    "test_id": {
+      "sft_wrong_grpo_right": 5,
+      "sft_right_grpo_wrong": 4
+    },
+    "test_rate_shift": {
+      "sft_wrong_grpo_right": 10,
+      "sft_right_grpo_wrong": 1
+    },
+    "test_more_users": {
+      "sft_wrong_grpo_right": 1,
+      "sft_right_grpo_wrong": 4
+    }
+  },
+  "dataset_sha256": {
+    "rl_prompts.jsonl": "04e494777df032874c897b5a0f851a7207a05c5868ad51f152e885558ba0c467",
+    "test_id.jsonl": "1723b1c4f36d1d448d7fe2d87c632142d39f02b7e0de184377145daf06fbebdf",
+    "test_more_users.jsonl": "e45c9ffe830feda04f03cabdf6f2049e58782d93057df6f0e5a7bd184cd23f09",
+    "test_rate_shift.jsonl": "4fd1b19c086e23064e36b6216eb02eec4a1674cf46b0797dd8e79d3e9e4b47d8",
+    "train.jsonl": "eb42e4773f1b14a9a110668a5ce05b0559e5afe27f58dd868927c4dde72857ea",
+    "validation.jsonl": "d47d5d4a22962eb4acee36c4811ebe744398af58ea99cfad735a59ec66dc8102"
+  }
+}

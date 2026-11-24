@@ -1,0 +1,4899 @@
+{
+  "stage": "base",
+  "checkpoint": "HuggingFaceTB/SmolLM2-135M@93efa2f",
+  "decoding": {
+    "method": "greedy",
+    "max_new_tokens": 32
+  },
+  "sets": {
+    "test_id": {
+      "n": 64,
+      "feasible_rate": 0.0,
+      "optimal_rate": 0.0,
+      "mean_optimality_ratio": 0.0,
+      "rows": [
+        {
+          "id": "test_id-0000",
+          "rates": [
+            [
+              5,
+              6
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              9,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0001",
+          "rates": [
+            [
+              7,
+              9
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              9,
+              5
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0002",
+          "rates": [
+            [
+              3,
+              8
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              1,
+              5
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0003",
+          "rates": [
+            [
+              7,
+              8
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0004",
+          "rates": [
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0005",
+          "rates": [
+            [
+              4,
+              8
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              4
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0006",
+          "rates": [
+            [
+              4,
+              5
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              9,
+              4
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0007",
+          "rates": [
+            [
+              8,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              8,
+              9
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0008",
+          "rates": [
+            [
+              8,
+              2
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0009",
+          "rates": [
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              9,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0010",
+          "rates": [
+            [
+              3,
+              1
+            ],
+            [
+              8,
+              5
+            ],
+            [
+              8,
+              4
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0011",
+          "rates": [
+            [
+              7,
+              3
+            ],
+            [
+              8,
+              7
+            ],
+            [
+              8,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0012",
+          "rates": [
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "response": " RB1=6, RB2=1\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between two people",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0013",
+          "rates": [
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              8,
+              9
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0014",
+          "rates": [
+            [
+              5,
+              5
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 11,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0015",
+          "rates": [
+            [
+              7,
+              3
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              8,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0016",
+          "rates": [
+            [
+              5,
+              9
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0017",
+          "rates": [
+            [
+              9,
+              6
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              7,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0018",
+          "rates": [
+            [
+              6,
+              6
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              3
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0019",
+          "rates": [
+            [
+              9,
+              4
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              8,
+              4
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0020",
+          "rates": [
+            [
+              5,
+              7
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0021",
+          "rates": [
+            [
+              9,
+              7
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0022",
+          "rates": [
+            [
+              9,
+              9
+            ],
+            [
+              9,
+              8
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0023",
+          "rates": [
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          "response": " RB1=6, RB2=3\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between two people",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0024",
+          "rates": [
+            [
+              2,
+              9
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0025",
+          "rates": [
+            [
+              2,
+              5
+            ],
+            [
+              9,
+              8
+            ],
+            [
+              1,
+              8
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0026",
+          "rates": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0027",
+          "rates": [
+            [
+              7,
+              3
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0028",
+          "rates": [
+            [
+              1,
+              7
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              8,
+              1
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0029",
+          "rates": [
+            [
+              6,
+              2
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              7,
+              2
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0030",
+          "rates": [
+            [
+              8,
+              8
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              1,
+              8
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0031",
+          "rates": [
+            [
+              5,
+              9
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0032",
+          "rates": [
+            [
+              6,
+              4
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0033",
+          "rates": [
+            [
+              4,
+              9
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              7,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0034",
+          "rates": [
+            [
+              8,
+              7
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0035",
+          "rates": [
+            [
+              2,
+              1
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0036",
+          "rates": [
+            [
+              7,
+              6
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0037",
+          "rates": [
+            [
+              6,
+              3
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 11,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0038",
+          "rates": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              7,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0039",
+          "rates": [
+            [
+              5,
+              2
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 10,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0040",
+          "rates": [
+            [
+              1,
+              5
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 10,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0041",
+          "rates": [
+            [
+              7,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              9
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0042",
+          "rates": [
+            [
+              7,
+              5
+            ],
+            [
+              9,
+              3
+            ],
+            [
+              8,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0043",
+          "rates": [
+            [
+              7,
+              7
+            ],
+            [
+              7,
+              9
+            ],
+            [
+              9,
+              2
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0044",
+          "rates": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0045",
+          "rates": [
+            [
+              2,
+              1
+            ],
+            [
+              9,
+              3
+            ],
+            [
+              8,
+              5
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0046",
+          "rates": [
+            [
+              5,
+              7
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0047",
+          "rates": [
+            [
+              4,
+              7
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              8,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0048",
+          "rates": [
+            [
+              7,
+              9
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              7,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0049",
+          "rates": [
+            [
+              2,
+              6
+            ],
+            [
+              9,
+              8
+            ],
+            [
+              9,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0050",
+          "rates": [
+            [
+              5,
+              8
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              4,
+              9
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0051",
+          "rates": [
+            [
+              9,
+              5
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0052",
+          "rates": [
+            [
+              1,
+              1
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 11,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0053",
+          "rates": [
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 8,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0054",
+          "rates": [
+            [
+              9,
+              1
+            ],
+            [
+              7,
+              5
+            ],
+            [
+              8,
+              4
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0055",
+          "rates": [
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              8,
+              8
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0056",
+          "rates": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0057",
+          "rates": [
+            [
+              6,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              9
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0058",
+          "rates": [
+            [
+              6,
+              4
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              1,
+              8
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0059",
+          "rates": [
+            [
+              7,
+              6
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0060",
+          "rates": [
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "response": " 1000000000000000000000000000000",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 9,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0061",
+          "rates": [
+            [
+              7,
+              6
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              8,
+              5
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0062",
+          "rates": [
+            [
+              5,
+              5
+            ],
+            [
+              9,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_id-0063",
+          "rates": [
+            [
+              5,
+              4
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              8,
+              3
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        }
+      ]
+    },
+    "test_rate_shift": {
+      "n": 64,
+      "feasible_rate": 0.0,
+      "optimal_rate": 0.0,
+      "mean_optimality_ratio": 0.0,
+      "rows": [
+        {
+          "id": "test_rate_shift-0000",
+          "rates": [
+            [
+              17,
+              12
+            ],
+            [
+              19,
+              29
+            ],
+            [
+              15,
+              29
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 48,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0001",
+          "rates": [
+            [
+              21,
+              18
+            ],
+            [
+              15,
+              28
+            ],
+            [
+              18,
+              16
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 49,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0002",
+          "rates": [
+            [
+              30,
+              21
+            ],
+            [
+              23,
+              12
+            ],
+            [
+              25,
+              30
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 60,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0003",
+          "rates": [
+            [
+              27,
+              25
+            ],
+            [
+              12,
+              11
+            ],
+            [
+              10,
+              17
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 44,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0004",
+          "rates": [
+            [
+              10,
+              10
+            ],
+            [
+              21,
+              26
+            ],
+            [
+              12,
+              28
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 49,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0005",
+          "rates": [
+            [
+              27,
+              27
+            ],
+            [
+              28,
+              18
+            ],
+            [
+              28,
+              14
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 55,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0006",
+          "rates": [
+            [
+              16,
+              23
+            ],
+            [
+              20,
+              10
+            ],
+            [
+              17,
+              22
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 43,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0007",
+          "rates": [
+            [
+              27,
+              19
+            ],
+            [
+              19,
+              13
+            ],
+            [
+              24,
+              19
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 46,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0008",
+          "rates": [
+            [
+              20,
+              10
+            ],
+            [
+              17,
+              22
+            ],
+            [
+              30,
+              21
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 52,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0009",
+          "rates": [
+            [
+              27,
+              12
+            ],
+            [
+              28,
+              17
+            ],
+            [
+              19,
+              25
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 53,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0010",
+          "rates": [
+            [
+              21,
+              17
+            ],
+            [
+              12,
+              22
+            ],
+            [
+              29,
+              13
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 51,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0011",
+          "rates": [
+            [
+              20,
+              17
+            ],
+            [
+              11,
+              19
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 39,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0012",
+          "rates": [
+            [
+              26,
+              23
+            ],
+            [
+              28,
+              23
+            ],
+            [
+              27,
+              26
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 54,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0013",
+          "rates": [
+            [
+              11,
+              27
+            ],
+            [
+              10,
+              28
+            ],
+            [
+              29,
+              23
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 57,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0014",
+          "rates": [
+            [
+              18,
+              26
+            ],
+            [
+              10,
+              27
+            ],
+            [
+              15,
+              30
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 48,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0015",
+          "rates": [
+            [
+              26,
+              11
+            ],
+            [
+              21,
+              11
+            ],
+            [
+              13,
+              15
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 41,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0016",
+          "rates": [
+            [
+              11,
+              30
+            ],
+            [
+              26,
+              14
+            ],
+            [
+              14,
+              15
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 56,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0017",
+          "rates": [
+            [
+              22,
+              22
+            ],
+            [
+              29,
+              22
+            ],
+            [
+              29,
+              23
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 52,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0018",
+          "rates": [
+            [
+              12,
+              27
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              21,
+              27
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 48,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0019",
+          "rates": [
+            [
+              15,
+              22
+            ],
+            [
+              19,
+              17
+            ],
+            [
+              14,
+              16
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 41,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0020",
+          "rates": [
+            [
+              15,
+              18
+            ],
+            [
+              13,
+              12
+            ],
+            [
+              24,
+              23
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 42,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0021",
+          "rates": [
+            [
+              15,
+              14
+            ],
+            [
+              25,
+              29
+            ],
+            [
+              13,
+              15
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 44,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0022",
+          "rates": [
+            [
+              16,
+              23
+            ],
+            [
+              27,
+              28
+            ],
+            [
+              10,
+              24
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 51,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0023",
+          "rates": [
+            [
+              10,
+              26
+            ],
+            [
+              26,
+              24
+            ],
+            [
+              10,
+              29
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 55,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0024",
+          "rates": [
+            [
+              22,
+              18
+            ],
+            [
+              16,
+              26
+            ],
+            [
+              24,
+              18
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 50,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0025",
+          "rates": [
+            [
+              16,
+              28
+            ],
+            [
+              10,
+              28
+            ],
+            [
+              30,
+              12
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 58,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0026",
+          "rates": [
+            [
+              18,
+              11
+            ],
+            [
+              17,
+              30
+            ],
+            [
+              10,
+              25
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 48,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0027",
+          "rates": [
+            [
+              26,
+              14
+            ],
+            [
+              11,
+              15
+            ],
+            [
+              24,
+              20
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 46,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0028",
+          "rates": [
+            [
+              13,
+              30
+            ],
+            [
+              26,
+              19
+            ],
+            [
+              30,
+              29
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 60,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0029",
+          "rates": [
+            [
+              25,
+              10
+            ],
+            [
+              18,
+              11
+            ],
+            [
+              22,
+              25
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 50,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0030",
+          "rates": [
+            [
+              15,
+              17
+            ],
+            [
+              20,
+              18
+            ],
+            [
+              27,
+              20
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 45,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0031",
+          "rates": [
+            [
+              30,
+              18
+            ],
+            [
+              29,
+              11
+            ],
+            [
+              14,
+              27
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 57,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0032",
+          "rates": [
+            [
+              26,
+              16
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              28,
+              29
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 55,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0033",
+          "rates": [
+            [
+              27,
+              29
+            ],
+            [
+              11,
+              20
+            ],
+            [
+              16,
+              25
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 52,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0034",
+          "rates": [
+            [
+              28,
+              24
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              14,
+              30
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 58,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0035",
+          "rates": [
+            [
+              16,
+              29
+            ],
+            [
+              25,
+              16
+            ],
+            [
+              12,
+              14
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 54,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0036",
+          "rates": [
+            [
+              21,
+              28
+            ],
+            [
+              23,
+              17
+            ],
+            [
+              10,
+              18
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 51,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0037",
+          "rates": [
+            [
+              10,
+              19
+            ],
+            [
+              20,
+              22
+            ],
+            [
+              19,
+              27
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 47,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0038",
+          "rates": [
+            [
+              22,
+              21
+            ],
+            [
+              17,
+              16
+            ],
+            [
+              16,
+              10
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 38,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0039",
+          "rates": [
+            [
+              24,
+              28
+            ],
+            [
+              16,
+              22
+            ],
+            [
+              21,
+              21
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 49,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0040",
+          "rates": [
+            [
+              14,
+              17
+            ],
+            [
+              29,
+              13
+            ],
+            [
+              25,
+              12
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 46,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0041",
+          "rates": [
+            [
+              24,
+              18
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 37,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0042",
+          "rates": [
+            [
+              16,
+              28
+            ],
+            [
+              12,
+              11
+            ],
+            [
+              24,
+              11
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 52,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0043",
+          "rates": [
+            [
+              19,
+              13
+            ],
+            [
+              12,
+              21
+            ],
+            [
+              11,
+              21
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 40,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0044",
+          "rates": [
+            [
+              15,
+              14
+            ],
+            [
+              19,
+              14
+            ],
+            [
+              10,
+              27
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 46,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0045",
+          "rates": [
+            [
+              28,
+              22
+            ],
+            [
+              11,
+              20
+            ],
+            [
+              23,
+              30
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 58,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0046",
+          "rates": [
+            [
+              18,
+              29
+            ],
+            [
+              30,
+              26
+            ],
+            [
+              23,
+              24
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 59,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0047",
+          "rates": [
+            [
+              26,
+              13
+            ],
+            [
+              28,
+              14
+            ],
+            [
+              17,
+              20
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 48,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0048",
+          "rates": [
+            [
+              21,
+              24
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              17,
+              24
+            ]
+          ],
+          "response": " RB1=21, RB2=24\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 52,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0049",
+          "rates": [
+            [
+              29,
+              11
+            ],
+            [
+              23,
+              15
+            ],
+            [
+              15,
+              18
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 47,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0050",
+          "rates": [
+            [
+              23,
+              28
+            ],
+            [
+              15,
+              26
+            ],
+            [
+              11,
+              13
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 49,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0051",
+          "rates": [
+            [
+              27,
+              25
+            ],
+            [
+              19,
+              18
+            ],
+            [
+              29,
+              23
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 54,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0052",
+          "rates": [
+            [
+              13,
+              10
+            ],
+            [
+              13,
+              20
+            ],
+            [
+              29,
+              13
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 49,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0053",
+          "rates": [
+            [
+              11,
+              15
+            ],
+            [
+              28,
+              26
+            ],
+            [
+              19,
+              20
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 48,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0054",
+          "rates": [
+            [
+              22,
+              17
+            ],
+            [
+              12,
+              16
+            ],
+            [
+              25,
+              22
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 44,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0055",
+          "rates": [
+            [
+              10,
+              17
+            ],
+            [
+              15,
+              24
+            ],
+            [
+              23,
+              20
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 47,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0056",
+          "rates": [
+            [
+              20,
+              22
+            ],
+            [
+              22,
+              28
+            ],
+            [
+              17,
+              26
+            ]
+          ],
+          "response": " RB1=20, RB2=22\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 48,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0057",
+          "rates": [
+            [
+              21,
+              17
+            ],
+            [
+              17,
+              13
+            ],
+            [
+              26,
+              16
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 43,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0058",
+          "rates": [
+            [
+              23,
+              17
+            ],
+            [
+              30,
+              29
+            ],
+            [
+              30,
+              12
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 59,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0059",
+          "rates": [
+            [
+              20,
+              14
+            ],
+            [
+              25,
+              20
+            ],
+            [
+              10,
+              11
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 40,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0060",
+          "rates": [
+            [
+              28,
+              16
+            ],
+            [
+              17,
+              19
+            ],
+            [
+              18,
+              27
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 55,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0061",
+          "rates": [
+            [
+              22,
+              27
+            ],
+            [
+              23,
+              22
+            ],
+            [
+              28,
+              24
+            ]
+          ],
+          "response": " RB1=22, RB2=27\n\nQuestion 10:\n\nA wireless network is to be used for a conference call between",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 55,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0062",
+          "rates": [
+            [
+              15,
+              24
+            ],
+            [
+              17,
+              16
+            ],
+            [
+              21,
+              30
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 47,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_rate_shift-0063",
+          "rates": [
+            [
+              20,
+              14
+            ],
+            [
+              16,
+              29
+            ],
+            [
+              10,
+              16
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 49,
+          "ratio": 0.0,
+          "reward": 0.0
+        }
+      ]
+    },
+    "test_more_users": {
+      "n": 64,
+      "feasible_rate": 0.0,
+      "optimal_rate": 0.0,
+      "mean_optimality_ratio": 0.0,
+      "rows": [
+        {
+          "id": "test_more_users-0000",
+          "rates": [
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              9,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0001",
+          "rates": [
+            [
+              4,
+              1
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0002",
+          "rates": [
+            [
+              9,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0003",
+          "rates": [
+            [
+              4,
+              6
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              7,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0004",
+          "rates": [
+            [
+              9,
+              4
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0005",
+          "rates": [
+            [
+              5,
+              9
+            ],
+            [
+              9,
+              5
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              8,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0006",
+          "rates": [
+            [
+              1,
+              2
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0007",
+          "rates": [
+            [
+              3,
+              3
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              9,
+              8
+            ]
+          ],
+          "response": " RB1=3, RB2=6\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0008",
+          "rates": [
+            [
+              9,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              9,
+              1
+            ]
+          ],
+          "response": " RB1=9, RB2=1\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0009",
+          "rates": [
+            [
+              5,
+              7
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              8,
+              2
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0010",
+          "rates": [
+            [
+              8,
+              8
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              9,
+              8
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0011",
+          "rates": [
+            [
+              5,
+              3
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              1,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0012",
+          "rates": [
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              6,
+              3
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0013",
+          "rates": [
+            [
+              4,
+              2
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          "response": " RB1=4, RB2=1\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0014",
+          "rates": [
+            [
+              6,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          "response": " RB1=6, RB2=4\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0015",
+          "rates": [
+            [
+              8,
+              9
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              7,
+              5
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0016",
+          "rates": [
+            [
+              2,
+              7
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "response": " RB1=2, RB2=3\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0017",
+          "rates": [
+            [
+              7,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              8,
+              3
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0018",
+          "rates": [
+            [
+              6,
+              6
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "response": " RB1=6, RB2=6\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0019",
+          "rates": [
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 10,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0020",
+          "rates": [
+            [
+              3,
+              7
+            ],
+            [
+              9,
+              4
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              6,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0021",
+          "rates": [
+            [
+              6,
+              3
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              9,
+              2
+            ]
+          ],
+          "response": " RB1=6, RB2=3\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0022",
+          "rates": [
+            [
+              6,
+              3
+            ],
+            [
+              9,
+              5
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "response": " RB1=6, RB2=3\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0023",
+          "rates": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 11,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0024",
+          "rates": [
+            [
+              9,
+              8
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              7,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0025",
+          "rates": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0026",
+          "rates": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              7,
+              3
+            ]
+          ],
+          "response": " RB1=3, RB2=3\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0027",
+          "rates": [
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0028",
+          "rates": [
+            [
+              8,
+              6
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0029",
+          "rates": [
+            [
+              6,
+              6
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              1,
+              9
+            ]
+          ],
+          "response": " RB1=6, RB2=6\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0030",
+          "rates": [
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              9
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0031",
+          "rates": [
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 11,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0032",
+          "rates": [
+            [
+              2,
+              4
+            ],
+            [
+              8,
+              6
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0033",
+          "rates": [
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              7,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0034",
+          "rates": [
+            [
+              4,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              9,
+              1
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0035",
+          "rates": [
+            [
+              2,
+              1
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              6,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0036",
+          "rates": [
+            [
+              6,
+              8
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "response": " RB1=6, RB2=7\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0037",
+          "rates": [
+            [
+              8,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              8,
+              2
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0038",
+          "rates": [
+            [
+              4,
+              2
+            ],
+            [
+              8,
+              6
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "response": " RB1=4, RB2=7\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0039",
+          "rates": [
+            [
+              7,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0040",
+          "rates": [
+            [
+              7,
+              7
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0041",
+          "rates": [
+            [
+              2,
+              3
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              9,
+              3
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0042",
+          "rates": [
+            [
+              6,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "response": " RB1=6, RB2=7\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0043",
+          "rates": [
+            [
+              1,
+              5
+            ],
+            [
+              8,
+              4
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0044",
+          "rates": [
+            [
+              8,
+              9
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy\n\nQuestion 10:\n\nA wireless network is to be used for a 10",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0045",
+          "rates": [
+            [
+              9,
+              7
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              8,
+              7
+            ]
+          ],
+          "response": " RB1=9, RB2=9\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0046",
+          "rates": [
+            [
+              2,
+              2
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0047",
+          "rates": [
+            [
+              4,
+              3
+            ],
+            [
+              8,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0048",
+          "rates": [
+            [
+              4,
+              7
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0049",
+          "rates": [
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              8
+            ]
+          ],
+          "response": " RB1=6, RB2=8\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0050",
+          "rates": [
+            [
+              7,
+              5
+            ],
+            [
+              7,
+              5
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "response": " RB1=7, RB2=5\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0051",
+          "rates": [
+            [
+              9,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0052",
+          "rates": [
+            [
+              3,
+              8
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              7,
+              5
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0053",
+          "rates": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 12,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0054",
+          "rates": [
+            [
+              9,
+              2
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0055",
+          "rates": [
+            [
+              4,
+              1
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              9
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 13,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0056",
+          "rates": [
+            [
+              5,
+              4
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 9,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0057",
+          "rates": [
+            [
+              6,
+              8
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "response": " RB1=6, RB2=8\n\nQuestion 10:\n\nA wireless network is to be used for a 10 Mbps",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0058",
+          "rates": [
+            [
+              7,
+              5
+            ],
+            [
+              8,
+              4
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0059",
+          "rates": [
+            [
+              7,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              8,
+              2
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 17,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0060",
+          "rates": [
+            [
+              8,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              8,
+              7
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 15,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0061",
+          "rates": [
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              1,
+              5
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 14,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0062",
+          "rates": [
+            [
+              4,
+              9
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              9,
+              7
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 18,
+          "ratio": 0.0,
+          "reward": 0.0
+        },
+        {
+          "id": "test_more_users-0063",
+          "rates": [
+            [
+              7,
+              6
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              8,
+              4
+            ]
+          ],
+          "response": " RB1=Ux,RB2=Uy with no explanation.\n\nQuestion 10:\n\nA wireless network is to be used for",
+          "feasible": false,
+          "optimal": false,
+          "achieved_rate": null,
+          "optimal_rate": 16,
+          "ratio": 0.0,
+          "reward": 0.0
+        }
+      ]
+    }
+  },
+  "evaluation_seconds": 337.7
+}
